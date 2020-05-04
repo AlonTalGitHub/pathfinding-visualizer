@@ -1,0 +1,118 @@
+/* Fonts */
+
+@font-face {
+    font-family: lato;
+    src: url(../../assets/fonts/Lato/Lato-Regular.ttf);
+}
+
+.main-logo {
+    font-family: Arial, sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 700;
+    padding: 16px 21px;
+    margin-right: 20px;
+}
+
+.toolbar-container {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    background-color: #34495e;
+    height: 65px;
+    width: 100%;
+}
+
+.toolbar-btn {
+    font-weight: bold;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 14px 21px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 8px 2px;
+    cursor: pointer;
+}
+
+.toolbar-btn:hover {
+    color: rgb(23, 180, 165);
+}
+
+.toolbar-btn-running {
+    font-weight: bold;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    color: rgb(182, 182, 182);
+    padding: 14px 21px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 8px 2px;
+    cursor: pointer;
+}
+
+.visualize-btn {
+    font-weight: bold;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 14px 21px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 8px 2px;
+    cursor: pointer;
+    background-color: #1abc9c;
+    border-radius: 4px;
+}
+
+.visualize-btn:hover {
+    background-color: rgb(23, 180, 165);
+}
+
+.visualize-btn-running {
+    font-weight: bold;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    color: rgb(182, 182, 182);
+    padding: 14px 21px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 8px 2px;
+    cursor: pointer;
+    background-color: rgb(185, 15, 15);
+    border-radius: 4px;
+}
+
+.navbar-container {
+    display: flex;
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.button {
+    font-weight: bold;
+    background-color: #282c34;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}

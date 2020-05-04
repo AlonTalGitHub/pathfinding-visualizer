@@ -1,0 +1,22 @@
+.app-body {
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+}
+
+.grid {
+    position: absolute;
+    margin: 20px 5vw 8px 5vw;
+}
+
+table {
+    border: 1px solid rgb(175, 216, 248);
+    border-collapse: collapse;
+  }
+
+.main-message {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    line-height: 1.72;
+    color: #34495e;
+    padding: 15px 25px 15px 25px;
+}
