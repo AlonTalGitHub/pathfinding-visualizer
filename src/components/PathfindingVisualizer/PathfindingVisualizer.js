@@ -25,7 +25,6 @@ export default function PathfindingVisualizer(props) {
     }, [mouseIsPressed]);
     
     useEffect(() => {
-        console.log('rendering grid');
     }, [grid]);
     
     const resetGrid = () => {
@@ -250,7 +249,7 @@ export default function PathfindingVisualizer(props) {
             <table className="grid">
                 <tbody>
                     {grid.map((row, rowIdx) => {
-                        return <tr key={rowIdx}>
+                        return <tr className="grid-row" key={rowIdx}>
                             {row.map((node, nodeIdx) => {
                                 const { row, col, isFinish, isStart, isWall, isVisited, isShortestPath } = node;
                                 return <Node
