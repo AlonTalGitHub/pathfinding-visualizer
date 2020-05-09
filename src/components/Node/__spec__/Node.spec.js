@@ -7,8 +7,11 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('Node', () => {
     const wrapper = shallow(<Node />);
-    const td = wrapper.find('td');
+    const node = wrapper.find('td');
     it('table grid cell', () => {
-        expect(td).toHaveLength(1);        
+        expect(node).toHaveLength(1);        
+    });
+    it('check Node props', () => {
+        expect(node.prop('className').trim()).toBe('node');
     });
 });
