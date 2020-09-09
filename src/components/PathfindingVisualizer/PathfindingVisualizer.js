@@ -8,9 +8,9 @@ import dijkstra, { getNodesInShortestPathOrder } from '../../algorithms/dijkstra
 import './PathfindingVisualizer.css';
 
 const START_NODE_ROW = 11;
-const START_NODE_COL = 15;
+const START_NODE_COL = 10;
 const FINISH_NODE_ROW = 11;
-const FINISH_NODE_COL = 45;
+const FINISH_NODE_COL = 50;
 
 export default function PathfindingVisualizer(props) {
     
@@ -21,11 +21,6 @@ export default function PathfindingVisualizer(props) {
         resetGrid();
     }, []);
     
-    useEffect(() => {
-    }, [mouseIsPressed]);
-    
-    useEffect(() => {
-    }, [grid]);
     
     const resetGrid = () => {
         const grid = getInitialGrid();

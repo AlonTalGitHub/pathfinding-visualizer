@@ -27,7 +27,7 @@ export default function Toolbar(props) {
 
     return (
         <div className="toolbar-container">
-            <div className="main-logo">Pathfinding Visualizer</div>
+            <div className="main-logo">Route Finder</div>
             <div className="toolbar-manu">
                 <button id="btn-0" className="visualize-btn" onClick={visualizeAlgorithm}>Visualize Dijkstra's!</button>
                 <button id="btn-1" className="toolbar-btn" onClick={clearBoard}>Clear Board</button>
