@@ -20,7 +20,7 @@ const FINISH_NODE_COL = 53;
 const MOBILE_START_NODE_ROW = 2;
 const MOBILE_START_NODE_COL = 2;
 const MOBILE_FINISH_NODE_ROW = 18;
-const MOBILE_FINISH_NODE_COL = 18;
+const MOBILE_FINISH_NODE_COL = 17;
 
 export default function PathfindingVisualizer(props) {
     
