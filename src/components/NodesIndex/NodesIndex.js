@@ -1,5 +1,4 @@
 import React from 'react';
-import Node from '../Node/Node.js';
 
 import '../Node/Node.css';
 import './NodesIndex.css';

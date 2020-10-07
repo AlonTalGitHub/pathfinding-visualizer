@@ -75,24 +75,13 @@
 }
 
 .visualize-btn:hover {
-    background-color: rgb(23, 180, 165);
+    background-color: rgb(24, 156, 143);
 }
 
 .visualize-btn-running {
-    font-weight: bold;
-    justify-content: center;
-    background-color: transparent;
-    border: none;
     color: rgb(182, 182, 182);
-    padding: 14px 21px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 8px 2px;
-    cursor: pointer;
-    background-color: rgb(185, 15, 15);
-    border-radius: 4px;
+    cursor: unset;
+    background-color: rgb(150, 76, 76);
 }
 
 .navbar-container {

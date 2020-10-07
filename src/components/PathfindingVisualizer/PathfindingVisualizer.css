@@ -5,7 +5,7 @@
 
 .grid {
     position: absolute;
-    margin: 20px 5vw 8px 5vw;
+    margin: 12px 5vw 10px 5vw;
 }
 
 table {
@@ -18,5 +18,5 @@ table {
     font-size: 1.2rem;
     line-height: 1.72;
     color: #34495e;
-    padding: 15px 25px 15px 25px;
+    padding: 10px 25px;
 }

@@ -20,6 +20,21 @@ const DropDownMenu = ({
     setAnchorEl(null);
   };
 
+  const handleCreateRandomMaze = () => {
+    createRandomMaze()
+    handleClose()
+  };
+
+  const handleClearPath = () => {
+    clearPath()
+    handleClose()
+  };
+
+  const handleClearBoard = () => {
+    clearBoard()
+    handleClose()
+  };
+
   return (
     <div>
       <MenuIcon aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick} />
@@ -30,9 +45,9 @@ const DropDownMenu = ({
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem id="btn-1" onClick={createRandomMaze}>Create Random Maze</MenuItem>
-        <MenuItem id="btn-2" onClick={clearPath}>Clear Path</MenuItem>
-        <MenuItem id="btn-3" onClick={clearBoard}>Clear Board</MenuItem>
+        <MenuItem id="btn-1" onClick={handleCreateRandomMaze}>Create Random Maze</MenuItem>
+        <MenuItem id="btn-2" onClick={handleClearPath}>Clear Path</MenuItem>
+        <MenuItem id="btn-3" onClick={handleClearBoard}>Clear Board</MenuItem>
       </Menu>
     </div>
   );

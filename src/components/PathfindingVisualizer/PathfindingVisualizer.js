@@ -9,7 +9,7 @@ import './PathfindingVisualizer.css';
 
 const WEB_SCREEN_ROWS = 25;
 const WEB_SCREEN_COLUMNS = 60;
-const MOBILE_SCREEN_ROWS = 20;
+const MOBILE_SCREEN_ROWS = 21;
 const MOBILE_SCREEN_COLUMNS = 20;
 
 const START_NODE_ROW = 11;
@@ -19,18 +19,19 @@ const FINISH_NODE_COL = 53;
 
 const MOBILE_START_NODE_ROW = 2;
 const MOBILE_START_NODE_COL = 2;
-const MOBILE_FINISH_NODE_ROW = 17;
-const MOBILE_FINISH_NODE_COL = 17;
+const MOBILE_FINISH_NODE_ROW = 18;
+const MOBILE_FINISH_NODE_COL = 18;
 
 export default function PathfindingVisualizer(props) {
     
     const [grid, setGrid] = useState([]);
     const [mouseIsPressed, setMouseIsPressed] = useState(false);
-    
+    const [isRunning, setIsRunning] = useState(false);
+
     useEffect(() => {
         resetGrid();
     }, []);
-    
+
     window.mobileCheck = function() {
         let check = false;
         (function(a) {
@@ -174,6 +175,10 @@ export default function PathfindingVisualizer(props) {
         }
     };
 
+    const toggleButton = () => {
+        setIsRunning(prevState => !prevState)
+    };
+
     const handleMouseDown = (row, col) => { 
         const newGrid = getNewGridWithWallToggled(grid, row, col);
         setGrid(newGrid);
@@ -227,13 +232,14 @@ export default function PathfindingVisualizer(props) {
             }, 35 * i);
             if (i === nodesInShortestPathOrder.length - 1) {
                 setTimeout(() => {
-                    changeButtonClass();
+                    toggleButton();
                 }, 50 * i);
             }
         }
     };
 
     const visualizeDijkstra = () => {
+        toggleButton();
         clearPath();
         const startNode = window.mobileCheck() ? grid[MOBILE_START_NODE_ROW][MOBILE_START_NODE_COL] : grid[START_NODE_ROW][START_NODE_COL]
         const finishNode = window.mobileCheck() ? grid[MOBILE_FINISH_NODE_ROW][MOBILE_FINISH_NODE_COL] : grid[FINISH_NODE_ROW][FINISH_NODE_COL]
@@ -278,6 +284,8 @@ export default function PathfindingVisualizer(props) {
                 clearBoard={clearBoard} 
                 clearPath={clearPath}
                 createRandomMaze={createRandomMaze}
+                changeButtonClass={changeButtonClass}
+                isRunning={isRunning}
                 ></Header>
             <NodesIndex></NodesIndex>
             <div className="main-message">Create a Maze and visualize the shortest path with Dijkstra's Algorithm!</div>
