@@ -1,6 +1,15 @@
 .node {
   background-color: rgb(255, 255, 255);
   width: 30px;
+  height: 1.5vw;
+  max-height: 30px;
+  border: 1px solid rgb(175, 216, 248);
+  border-collapse: collapse;
+}
+
+.node-icon {
+  background-color: rgb(255, 255, 255);
+  width: 30px;
   height: 30px;
   border: 1px solid rgb(175, 216, 248);
   border-collapse: collapse;
@@ -147,5 +156,14 @@
     transform: scale(1);
     background-color: rgb(255, 254, 106);
     border: 1px solid rgb(255, 254, 106);
+  }
+}
+
+/* Media Queries */
+
+@media (max-width: 500px) {
+  .node {
+    height: unset;
+    padding-top: 5%;
   }
 }
