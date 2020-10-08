@@ -1,18 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import './Node.css';
 
 
 export default function Node(props) {
-
-    // const [node, setNode] = useState({});
-
-    // const loadNode = () => {
-    //     console.log(node)
-    // }
-    // useEffect(() => {
-    //     loadNode()
-    // }, [node]);
 
     const {
         row,
